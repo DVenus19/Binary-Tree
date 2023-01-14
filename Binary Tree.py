@@ -25,3 +25,6 @@ class BinarySearchTreeNode:
             else:
                 self.right = BinarySearchTreeNode(data)
 
+def in_order_travesal(self):
+
+
