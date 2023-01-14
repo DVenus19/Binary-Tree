@@ -4,3 +4,4 @@ print("********** BSCOE 2-2 **********")
 
 class BinarySearchTreeNode:
     def __init__(self,data):
+        self.data = data
