@@ -33,6 +33,7 @@ def in_order_travesal(self):
         elements += self.left.in_order_traversal()
 
     #visit base node
+    elements.append(self.data)
     #visit right tree
     return elements
 
