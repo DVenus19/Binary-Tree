@@ -120,3 +120,29 @@ def build_tree(elements):
         root.add_child(elements[i])
 
     return root
+
+
+if __name__ == '__main__':
+    numbers_tree = build_tree([5, 41, 3, 20, 19, 67, 10, 15, 78, 18, 33, 65, 89])
+    print("Minimum element in the list: ",numbers_tree.find_min())
+    print("Maximum element in the list: ", numbers_tree.find_max())
+    print("Is there a number 19? ", numbers_tree.search(19))
+    print("Is there a number 131? ", numbers_tree.search(131))
+    print("Is there a number 72? ", numbers_tree.search(72))
+    print("Total Value: ", numbers_tree.calculate_sum())
+    print("\nIn order traversal: ", numbers_tree.in_order_traversal())
+    print("Pre order traversal: ",numbers_tree.pre_order_traversal())
+    print("Post order traversal: ", numbers_tree.post_order_traversal())
+
+
+    print("\nFor the Fullname : ")
+    name_tree = build_tree(["V", "E", "N", "U", "S", "M", "D", "O", "N", "A", "S", "C","O"])
+    print("Minimum element in the list: ", name_tree.find_min())
+    print("Maximum element in the list: ", name_tree.find_max())
+    print("Is there a letter O in my fullname? ", name_tree.search("O"))
+    print("Is there a letter B in my fullname ? ", name_tree.search("B"))
+    print("Is there a letter V in my fullname ? ", name_tree.search("V"))
+    print("\nIn order traversal: ", name_tree.in_order_traversal())
+    print("Pre order traversal: ", name_tree.pre_order_traversal())
+    print("Post order traversal: ", name_tree.post_order_traversal())
+
