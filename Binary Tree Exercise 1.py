@@ -89,10 +89,11 @@ class BinarySearchTreeNode:
         if self.right:
             elements += self.right.post_order_traversal()
 
-        # Visit the node last.
+        #Lastly,visiting the node
         elements.append(self.data)
 
         return elements
 
-    def pre_order_traversal(self):  # performs pre order traversal of a binary tree
+    #performs pre order traversal of a binary tree
+    def pre_order_traversal(self):
         elements = []
