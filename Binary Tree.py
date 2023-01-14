@@ -41,8 +41,9 @@ def in_order_travesal(self):
 
     return elements
 
+def build_tree(elements):
+    root = BinarySearchTreeNode(elements[0])
 if __name__ == '__main__':
-    #example
     numbers = [17,4,1,20,9,23,18,34]
 
 
