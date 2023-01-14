@@ -44,6 +44,8 @@ class BinarySearchTreeNode:
     def search(self,val):
         if self.data == val:
             return True
+        if val < self.data:
+            #val might be in left subtree
 
 
 
