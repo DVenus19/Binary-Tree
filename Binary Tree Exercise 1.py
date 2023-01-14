@@ -97,3 +97,26 @@ class BinarySearchTreeNode:
     #performs pre order traversal of a binary tree
     def pre_order_traversal(self):
         elements = []
+
+      # First visiting the node
+        elements.append(self.data)
+
+        #Next is visit the left side
+        if self.left:
+            elements += self.left.pre_order_traversal()
+
+        #Finally,visit the right side
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements
+
+
+def build_tree(elements):
+    print("Building tree with these following elements:",elements)
+    root = BinarySearchTreeNode(elements[0])
+
+    for i in range(1,len(elements)):
+        root.add_child(elements[i])
+
+    return root
