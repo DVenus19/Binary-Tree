@@ -15,9 +15,13 @@ class BinarySearchTreeNode:
         if data < self.data:
             #adding data in the left subtree
             if self_left:
-                pass
+                self.left.add_child(data)
             else:
                 self.left = BinarySearchTreeNode(data)
         else:
             #adding data in the right subtree
+            if self_right:
+                self.left.add_child(data)
+            else:
+                self.left = BinarySearchTreeNode(data)
 
