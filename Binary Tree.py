@@ -28,9 +28,12 @@ class BinarySearchTreeNode:
 def in_order_travesal(self):
     elements = []
 
+    #visit left tree
     if self.left:
         elements += self.left.in_order_traversal()
 
+    #visit base node
+    #visit right tree
     return elements
 
 
