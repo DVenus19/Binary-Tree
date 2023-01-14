@@ -55,3 +55,44 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+
+    #finds minimum element in entire binary tree
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
+
+    #finds maximum element in entire binary tree
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
+
+    #calculates the sum of all elements
+    def calculate_sum(self):
+        elements = self.in_order_traversal()
+        Total_Value = 0
+        for i in range(len(elements)):
+            Total_Value += elements[i]
+
+        return Total_Value
+
+    #performs post order traversal of a binary tree
+    def post_order_traversal(self):
+        elements = []
+
+        #First,visiting the left side
+        if self.left:
+            elements += self.left.post_order_traversal()
+
+        #Second,visiting the right side
+        if self.right:
+            elements += self.right.post_order_traversal()
+
+        # Visit the node last.
+        elements.append(self.data)
+
+        return elements
+
+    def pre_order_traversal(self):  # performs pre order traversal of a binary tree
+        elements = []
