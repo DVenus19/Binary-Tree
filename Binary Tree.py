@@ -41,5 +41,7 @@ def in_order_travesal(self):
 
     return elements
 
+if __name__ == '__main__':
+
 
 
