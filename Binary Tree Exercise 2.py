@@ -52,3 +52,34 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+
+    def delete(self, val):
+        if val < self.data:
+            if self.left:
+                self.left = self.left.delete(val)
+        elif val > self.data:
+            if self.right:
+                self.right = self.right.delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
+            elif self.left is None:
+                return self.right
+            elif self.right is None:
+                return self.right
+
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
+
+        return self
+
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
+
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
