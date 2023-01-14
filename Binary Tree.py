@@ -28,6 +28,8 @@ class BinarySearchTreeNode:
 def in_order_travesal(self):
     elements = []
 
+    if self.left:
+
     return elements
 
 
