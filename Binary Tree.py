@@ -23,5 +23,5 @@ class BinarySearchTreeNode:
             if self_right:
                 self.right.add_child(data)
             else:
-                self.left = BinarySearchTreeNode(data)
+                self.right = BinarySearchTreeNode(data)
 
