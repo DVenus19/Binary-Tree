@@ -85,10 +85,32 @@ class BinarySearchTreeNode:
         return self.left.find_min()
 
 def build_tree(elements):
-    print("Building tree with these elements:",elements)
+    print("Building tree with these following elements:",elements)
     root = BinarySearchTreeNode(elements[0])
 
     for i in range(1,len(elements)):
         root.add_child(elements[i])
 
     return root
+
+if __name__ == '__main__':
+
+    numbers_tree = build_tree([5, 41, 3, 20, 19, 67, 10, 15, 78, 18, 33, 65, 89])
+    print("\nIn order traversal: ", numbers_tree.in_order_traversal())
+    numbers_tree.delete(3)
+    print("After deleting number 3: ", numbers_tree.in_order_traversal())
+    numbers_tree.delete(67)
+    print("After deleting number 67: ", numbers_tree.in_order_traversal())
+    numbers_tree.delete(10)
+    print("After deleting number 10: ", numbers_tree.in_order_traversal())
+
+    print("with my fullname: ")
+    name_tree = build_tree(["V", "E", "N", "U", "S", "M", "D", "O", "N", "A", "S", "C", "O"])
+    print("\nIn order traversal: ", name_tree.in_order_traversal())
+    name_tree.delete("V")
+    print("After deleting letter A: ", name_tree.in_order_traversal())
+    name_tree.delete("M")
+    print("After deleting letter M: ", name_tree.in_order_traversal())
+    name_tree.delete("D")
+    print("After deleting letter D: ", name_tree.in_order_traversal())
+
