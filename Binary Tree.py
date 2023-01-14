@@ -45,7 +45,10 @@ class BinarySearchTreeNode:
         if self.data == val:
             return True
         if val < self.data:
-            #val might be in left subtree
+            if self.left:
+                pass
+            else:
+                return False
         if val > self.data:
             #val might be in right subtree
 
