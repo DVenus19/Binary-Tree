@@ -14,32 +14,34 @@ class BinarySearchTreeNode:
 
         if data < self.data:
             #adding data in the left subtree
-            if self_left:
+            if self.left:
                 self.left.add_child(data)
             else:
                 self.left = BinarySearchTreeNode(data)
         else:
             #adding data in the right subtree
-            if self_right:
+            if self.right:
                 self.right.add_child(data)
             else:
                 self.right = BinarySearchTreeNode(data)
 
-def in_order_travesal(self):
-    elements = []
+    def in_order_travesal(self):
+         elements = []
 
-    #visit left tree
-    if self.left:
-        elements += self.left.in_order_traversal()
+         #visit left tree
+         if self.left:
+           elements += self.left.in_order_traversal()
 
-    #visit base node
-    elements.append(self.data)
+         #visit base node
+         elements.append(self.data)
 
-    #visit right tree
-    if self.right:
-        elements += self.right.in_order_traversal()
+         #visit right tree
+         if self.right:
+           elements += self.right.in_order_traversal()
 
-    return elements
+         return elements
+
+
 
 def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
