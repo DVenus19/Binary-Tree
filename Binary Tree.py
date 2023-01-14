@@ -26,5 +26,7 @@ class BinarySearchTreeNode:
                 self.right = BinarySearchTreeNode(data)
 
 def in_order_travesal(self):
+    elements = []
+
 
 
