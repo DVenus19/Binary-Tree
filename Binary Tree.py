@@ -13,4 +13,5 @@ class BinarySearchTreeNode:
             return
 
         if data < self.data:
+            #adding data in the left subtree
 
