@@ -12,3 +12,5 @@ class BinarySearchTreeNode:
         if data == self.data:
             return
 
+        if data < self.data:
+
