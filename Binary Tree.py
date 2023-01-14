@@ -34,7 +34,11 @@ def in_order_travesal(self):
 
     #visit base node
     elements.append(self.data)
+
     #visit right tree
+    if self.right:
+        elements += self.right.in_order_traversal()
+
     return elements
 
 
